@@ -39,25 +39,27 @@
             this.chkBoxClearUSB = new System.Windows.Forms.CheckBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxWriteTimeout = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBoxReadTimeout = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxStopBits = new System.Windows.Forms.ComboBox();
+            this.btnUSBConnect = new System.Windows.Forms.Button();
+            this.txtBoxDataBits = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxParity = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxBaudRate = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBoxPortName = new System.Windows.Forms.TextBox();
-            this.comboBoxParity = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxDataBits = new System.Windows.Forms.TextBox();
-            this.btnUSBConnect = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxStopBits = new System.Windows.Forms.ComboBox();
-            this.txtBoxReadTimeout = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtBoxWriteTimeout = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblUSBBytesRead = new System.Windows.Forms.Label();
             this.lblBluetoothBytesRead = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.richTextBoxUSBBytes = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxBluetoothBytes = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 150);
+            this.label1.Location = new System.Drawing.Point(242, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 25);
             this.label1.TabIndex = 2;
@@ -94,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(598, 150);
+            this.label2.Location = new System.Drawing.Point(598, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 3;
@@ -184,6 +186,92 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "USB Connect";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Write Timeout:";
+            // 
+            // txtBoxWriteTimeout
+            // 
+            this.txtBoxWriteTimeout.Location = new System.Drawing.Point(90, 202);
+            this.txtBoxWriteTimeout.Name = "txtBoxWriteTimeout";
+            this.txtBoxWriteTimeout.Size = new System.Drawing.Size(95, 20);
+            this.txtBoxWriteTimeout.TabIndex = 12;
+            this.txtBoxWriteTimeout.Text = "500";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Read Timeout:";
+            // 
+            // txtBoxReadTimeout
+            // 
+            this.txtBoxReadTimeout.Location = new System.Drawing.Point(90, 175);
+            this.txtBoxReadTimeout.Name = "txtBoxReadTimeout";
+            this.txtBoxReadTimeout.Size = new System.Drawing.Size(95, 20);
+            this.txtBoxReadTimeout.TabIndex = 10;
+            this.txtBoxReadTimeout.Text = "500";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Stop Bits:";
+            // 
+            // comboBoxStopBits
+            // 
+            this.comboBoxStopBits.FormattingEnabled = true;
+            this.comboBoxStopBits.Location = new System.Drawing.Point(72, 126);
+            this.comboBoxStopBits.Name = "comboBoxStopBits";
+            this.comboBoxStopBits.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxStopBits.TabIndex = 9;
+            // 
+            // btnUSBConnect
+            // 
+            this.btnUSBConnect.Location = new System.Drawing.Point(6, 234);
+            this.btnUSBConnect.Name = "btnUSBConnect";
+            this.btnUSBConnect.Size = new System.Drawing.Size(188, 45);
+            this.btnUSBConnect.TabIndex = 8;
+            this.btnUSBConnect.Text = "Connect";
+            this.btnUSBConnect.UseVisualStyleBackColor = true;
+            this.btnUSBConnect.Click += new System.EventHandler(this.btnUSBConnect_Click);
+            // 
+            // txtBoxDataBits
+            // 
+            this.txtBoxDataBits.Location = new System.Drawing.Point(72, 99);
+            this.txtBoxDataBits.Name = "txtBoxDataBits";
+            this.txtBoxDataBits.Size = new System.Drawing.Size(113, 20);
+            this.txtBoxDataBits.TabIndex = 7;
+            this.txtBoxDataBits.Text = "8";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Data Bits:";
+            // 
+            // comboBoxParity
+            // 
+            this.comboBoxParity.FormattingEnabled = true;
+            this.comboBoxParity.Location = new System.Drawing.Point(72, 72);
+            this.comboBoxParity.Name = "comboBoxParity";
+            this.comboBoxParity.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxParity.TabIndex = 5;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -227,96 +315,10 @@
             this.txtBoxPortName.TabIndex = 0;
             this.txtBoxPortName.Text = "COM4";
             // 
-            // comboBoxParity
-            // 
-            this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(72, 72);
-            this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(113, 21);
-            this.comboBoxParity.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Data Bits:";
-            // 
-            // txtBoxDataBits
-            // 
-            this.txtBoxDataBits.Location = new System.Drawing.Point(72, 99);
-            this.txtBoxDataBits.Name = "txtBoxDataBits";
-            this.txtBoxDataBits.Size = new System.Drawing.Size(113, 20);
-            this.txtBoxDataBits.TabIndex = 7;
-            this.txtBoxDataBits.Text = "8";
-            // 
-            // btnUSBConnect
-            // 
-            this.btnUSBConnect.Location = new System.Drawing.Point(6, 234);
-            this.btnUSBConnect.Name = "btnUSBConnect";
-            this.btnUSBConnect.Size = new System.Drawing.Size(188, 45);
-            this.btnUSBConnect.TabIndex = 8;
-            this.btnUSBConnect.Text = "Connect";
-            this.btnUSBConnect.UseVisualStyleBackColor = true;
-            this.btnUSBConnect.Click += new System.EventHandler(this.btnUSBConnect_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Stop Bits:";
-            // 
-            // comboBoxStopBits
-            // 
-            this.comboBoxStopBits.FormattingEnabled = true;
-            this.comboBoxStopBits.Location = new System.Drawing.Point(72, 126);
-            this.comboBoxStopBits.Name = "comboBoxStopBits";
-            this.comboBoxStopBits.Size = new System.Drawing.Size(113, 21);
-            this.comboBoxStopBits.TabIndex = 9;
-            // 
-            // txtBoxReadTimeout
-            // 
-            this.txtBoxReadTimeout.Location = new System.Drawing.Point(90, 175);
-            this.txtBoxReadTimeout.Name = "txtBoxReadTimeout";
-            this.txtBoxReadTimeout.Size = new System.Drawing.Size(95, 20);
-            this.txtBoxReadTimeout.TabIndex = 10;
-            this.txtBoxReadTimeout.Text = "500";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Read Timeout:";
-            // 
-            // txtBoxWriteTimeout
-            // 
-            this.txtBoxWriteTimeout.Location = new System.Drawing.Point(90, 202);
-            this.txtBoxWriteTimeout.Name = "txtBoxWriteTimeout";
-            this.txtBoxWriteTimeout.Size = new System.Drawing.Size(95, 20);
-            this.txtBoxWriteTimeout.TabIndex = 12;
-            this.txtBoxWriteTimeout.Text = "500";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 205);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Write Timeout:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(304, 156);
+            this.label10.Location = new System.Drawing.Point(304, 21);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 8;
@@ -325,7 +327,7 @@
             // lblUSBBytesRead
             // 
             this.lblUSBBytesRead.AutoSize = true;
-            this.lblUSBBytesRead.Location = new System.Drawing.Point(366, 156);
+            this.lblUSBBytesRead.Location = new System.Drawing.Point(375, 21);
             this.lblUSBBytesRead.Name = "lblUSBBytesRead";
             this.lblUSBBytesRead.Size = new System.Drawing.Size(13, 13);
             this.lblUSBBytesRead.TabIndex = 9;
@@ -334,7 +336,7 @@
             // lblBluetoothBytesRead
             // 
             this.lblBluetoothBytesRead.AutoSize = true;
-            this.lblBluetoothBytesRead.Location = new System.Drawing.Point(769, 159);
+            this.lblBluetoothBytesRead.Location = new System.Drawing.Point(778, 21);
             this.lblBluetoothBytesRead.Name = "lblBluetoothBytesRead";
             this.lblBluetoothBytesRead.Size = new System.Drawing.Size(13, 13);
             this.lblBluetoothBytesRead.TabIndex = 11;
@@ -343,17 +345,37 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(707, 159);
+            this.label12.Location = new System.Drawing.Point(707, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 13);
             this.label12.TabIndex = 10;
             this.label12.Text = "Bytes Read:";
+            // 
+            // richTextBoxUSBBytes
+            // 
+            this.richTextBoxUSBBytes.Location = new System.Drawing.Point(247, 41);
+            this.richTextBoxUSBBytes.Name = "richTextBoxUSBBytes";
+            this.richTextBoxUSBBytes.ReadOnly = true;
+            this.richTextBoxUSBBytes.Size = new System.Drawing.Size(349, 131);
+            this.richTextBoxUSBBytes.TabIndex = 12;
+            this.richTextBoxUSBBytes.Text = "";
+            // 
+            // richTextBoxBluetoothBytes
+            // 
+            this.richTextBoxBluetoothBytes.Location = new System.Drawing.Point(603, 41);
+            this.richTextBoxBluetoothBytes.Name = "richTextBoxBluetoothBytes";
+            this.richTextBoxBluetoothBytes.ReadOnly = true;
+            this.richTextBoxBluetoothBytes.Size = new System.Drawing.Size(349, 131);
+            this.richTextBoxBluetoothBytes.TabIndex = 13;
+            this.richTextBoxBluetoothBytes.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 607);
+            this.Controls.Add(this.richTextBoxBluetoothBytes);
+            this.Controls.Add(this.richTextBoxUSBBytes);
             this.Controls.Add(this.lblBluetoothBytesRead);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblUSBBytesRead);
@@ -410,6 +432,8 @@
         private System.Windows.Forms.Label lblUSBBytesRead;
         private System.Windows.Forms.Label lblBluetoothBytesRead;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RichTextBox richTextBoxUSBBytes;
+        private System.Windows.Forms.RichTextBox richTextBoxBluetoothBytes;
     }
 }
 

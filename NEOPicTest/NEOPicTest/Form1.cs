@@ -37,7 +37,13 @@ namespace NEOPicTest
                 richTextBoxUSB.SelectionStart = 0;
                 richTextBoxUSB.ScrollToCaret();
 
+                richTextBoxUSBBytes.Clear();
+                richTextBoxUSBBytes.SelectionStart = 0;
+                richTextBoxUSBBytes.ScrollToCaret();
+
+                //Reset bytes read count
                 USBBytesRead = 0;
+                OverwriteText(USBBytesRead.ToString(), lblUSBBytesRead);
             }
 
             if (chkBoxClearBluetooth.Checked)
@@ -46,7 +52,13 @@ namespace NEOPicTest
                 richTextBoxBluetooth.SelectionStart = 0;
                 richTextBoxBluetooth.ScrollToCaret();
 
+                richTextBoxBluetoothBytes.Clear();
+                richTextBoxBluetoothBytes.SelectionStart = 0;
+                richTextBoxBluetoothBytes.ScrollToCaret();
+
+                //Reset bytes read count
                 BluetoothBytesRead = 0;
+                OverwriteText(BluetoothBytesRead.ToString(), lblBluetoothBytesRead);
             }
         }
 
@@ -103,6 +115,7 @@ namespace NEOPicTest
                     for (int i = 0; i < bytesRead; i++)
                     {
                         AppendText("" + Convert.ToChar(buffer[i]), richTextBoxUSB);
+                        AppendText("#: " + (USBBytesRead - bytesRead + i) + "\tb10: " + buffer[i] + "\tb16: " + Convert.ToString(buffer[i], 16) + "\tb2: " + Convert.ToString(buffer[i], 2) + "\n", richTextBoxUSBBytes);
                     }
                 }
                 catch (TimeoutException) { }
@@ -118,8 +131,12 @@ namespace NEOPicTest
             }
 
             rtb.Text += value;
-            rtb.SelectionStart = rtb.Text.Length;
-            rtb.ScrollToCaret();
+
+            if (value.Contains("\n") || value.Contains("\r"))
+            {
+                rtb.SelectionStart = rtb.Text.Length;
+                rtb.ScrollToCaret();
+            }
         }
 
         public void OverwriteText(string value, Label lbl)
