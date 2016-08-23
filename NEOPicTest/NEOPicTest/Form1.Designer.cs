@@ -60,6 +60,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.richTextBoxUSBBytes = new System.Windows.Forms.RichTextBox();
             this.richTextBoxBluetoothBytes = new System.Windows.Forms.RichTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -369,11 +370,21 @@
             this.richTextBoxBluetoothBytes.TabIndex = 13;
             this.richTextBoxBluetoothBytes.Text = "";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(12, 303);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 212);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Bluetooth Connect";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 607);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.richTextBoxBluetoothBytes);
             this.Controls.Add(this.richTextBoxUSBBytes);
             this.Controls.Add(this.lblBluetoothBytesRead);
@@ -434,6 +445,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RichTextBox richTextBoxUSBBytes;
         private System.Windows.Forms.RichTextBox richTextBoxBluetoothBytes;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
