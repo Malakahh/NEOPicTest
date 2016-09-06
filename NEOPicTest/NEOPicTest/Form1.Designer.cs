@@ -314,7 +314,7 @@
             this.txtBoxPortName.Name = "txtBoxPortName";
             this.txtBoxPortName.Size = new System.Drawing.Size(113, 20);
             this.txtBoxPortName.TabIndex = 0;
-            this.txtBoxPortName.Text = "COM4";
+            this.txtBoxPortName.Text = "COM3";
             // 
             // label10
             // 
